@@ -8,21 +8,21 @@ import java.util.List;
 @Service
 public interface IServiceBook {
 
-    public List<Book> getAll();
+    List<Book> getAll();
 
-    public void save(BookDto bookDto);
+    void save(BookDto bookDto);
 
-    public void deleteById(String id);
+    void deleteById(String id);
 
-    public Book getOneByISBN(String isbn);
+    Book getOneByISBN(String isbn);
 
-    public Book getOneByMFN(String mfn);
+    Book getOneByMFN(String mfn);
 
-    public Book getOneByTitle(String title);
+    Book getOneByTitle(String title);
 
-    public List<Book> getManyByAuthor(String authorName);
+    List<Book> getManyByAuthor(String authorName);
 
-    public List<Book> getManyByClassification(String classificationName);
+    List<Book> getManyByClassification(String classificationName);
 
-    public List<Book> getManyByPublisher(String publisherName);
+    List<Book> getManyByPublisher(String publisherName);
 }

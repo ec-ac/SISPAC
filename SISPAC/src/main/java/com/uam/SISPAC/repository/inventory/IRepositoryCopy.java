@@ -11,5 +11,5 @@ import java.util.List;
 public interface IRepositoryCopy extends JpaRepository<Copy, String> {
 
     @Query("select e from Copy e where e.book.ISBN = :book")
-            public List<Copy> getCopyByBook(@Param("book") String book);
+            List<Copy> getCopyByBook(@Param("book") String book);
 }

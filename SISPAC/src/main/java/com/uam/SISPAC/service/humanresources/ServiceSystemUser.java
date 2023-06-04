@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Component("ServiceSystemUser")
 public class ServiceSystemUser implements IServiceSystemUser {
     @Autowired
     private IRepositorySystemUser repo;

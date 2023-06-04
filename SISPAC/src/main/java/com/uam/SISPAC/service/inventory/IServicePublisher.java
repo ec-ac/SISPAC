@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface IServicePublisher {
 
-    public List<Publisher> getAll();
+    List<Publisher> getAll();
 
-    public Publisher save(PublisherDto publisherDto);
+    Publisher save(PublisherDto publisherDto);
 
-    public void deleteById(String id);
+    void deleteById(String id);
 }

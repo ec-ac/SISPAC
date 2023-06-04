@@ -11,21 +11,21 @@ import java.util.List;
 @Repository
 public interface IRepositoryBook extends JpaRepository<Book, String> {
     @Query("select b from Book b where b.ISBN = :isbn")
-    public Book getBookByISBN(@Param("isbn") String isbn);
+    Book getBookByISBN(@Param("isbn") String isbn);
 
     @Query("select b from Book b where b.MFN = :mfn")
-    public Book getBookByMFN(@Param("mfn") String mfn);
+    Book getBookByMFN(@Param("mfn") String mfn);
 
     @Query("select b from Book b where b.title = :title")
-    public Book getBookByTitle(@Param("title") String title);
+    Book getBookByTitle(@Param("title") String title);
 
     @Query("select b from Book b where b.classification.name = :classificationName")
-    public List<Book> getBookByClassification(@Param("classificationName") String classificationName);
+    List<Book> getBookByClassification(@Param("classificationName") String classificationName);
 
     @Query("select b from Book b where b.publisher.name = :publisherName")
-    public List<Book> getBookByPublisher(@Param("publisherName") String publisherName);
+    List<Book> getBookByPublisher(@Param("publisherName") String publisherName);
 
     @Query("select b from Book b join b.authors a where a.name = :authorName")
-    public List<Book> getBooksByAuthor(@Param("authorName") String authorName);
+    List<Book> getBooksByAuthor(@Param("authorName") String authorName);
 
 }

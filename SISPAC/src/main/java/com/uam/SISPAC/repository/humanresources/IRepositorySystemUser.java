@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IRepositorySystemUser extends JpaRepository<SystemUser, String> {
     @Query("select e from SystemUser e where e.cif = :cif and e.password = :password")
-    public SystemUser getSystemUserByCif(@Param("cif") String cif, @Param("password")  String password);
+    SystemUser getSystemUserByCif(@Param("cif") String cif, @Param("password")  String password);
 }

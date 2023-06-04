@@ -9,10 +9,10 @@ import java.util.List;
 @Service
 public interface IServiceLoan {
 
-    public void loanCreate(LoanDto loan);
+    void loanCreate(LoanDto loan);
 
-    public void loanDelete(String id);
+    void loanDelete(String id);
 
-    public List<Loan> checkLoans();
+    List<Loan> checkLoans();
 
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "SystemUser")
+@Entity
 @Table(schema = "HumanResources")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class SystemUser {
@@ -31,6 +31,13 @@ public class SystemUser {
     private String lastNames;
     private String phoneNumber;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "systemUser")
+    private List<Loan> loans;
+
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
+
     public SystemUser(String id, String cif, String cardNumber, String password, Boolean status, String names, String lastNames, String phoneNumber, UserType userType) {
         this.id = id;
         this.cif = cif;
@@ -42,11 +49,4 @@ public class SystemUser {
         this.phoneNumber = phoneNumber;
         this.userType = userType;
     }
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "systemUser")
-    private List<Loan> loans;
-
-    @Enumerated(EnumType.STRING)
-    private UserType userType;
 }

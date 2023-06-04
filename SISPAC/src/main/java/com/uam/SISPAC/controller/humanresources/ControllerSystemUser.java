@@ -5,21 +5,17 @@ import com.uam.SISPAC.dto.humanresources.SystemUserDto;
 import com.uam.SISPAC.model.humanresources.SystemUser;
 import com.uam.SISPAC.service.humanresources.IServiceSystemUser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-
-
 @RestController
 @CrossOrigin("192.*.*.*")
 @RequestMapping("/systemuser")
 public class ControllerSystemUser {
     @Autowired
-    @Qualifier("ServiceSystemUser")
     private IServiceSystemUser serviceSystemUser;
 
     @GetMapping("/all")

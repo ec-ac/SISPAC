@@ -8,10 +8,10 @@ import java.util.List;
 @Service
 
 public interface IServiceAuthor {
-    public List<Author> getAll();
+    List<Author> getAll();
 
-    public Author save(AuthorDto author);
+    Author save(AuthorDto author);
 
-    public void deleteById(String id);
+    void deleteById(String id);
 }
 

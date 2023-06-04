@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public interface IServiceClassification {
-    public List<Classification> getAll();
+    List<Classification> getAll();
 
-    public Classification save(ClassificationDto classification);
+    Classification save(ClassificationDto classification);
 
-    public void deleteById(String id);
+    void deleteById(String id);
 }

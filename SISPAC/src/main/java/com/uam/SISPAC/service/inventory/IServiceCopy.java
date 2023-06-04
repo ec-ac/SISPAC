@@ -8,9 +8,9 @@ import java.util.List;
 
 @Service
 public interface IServiceCopy {
-    public Copy save(CopyDto copy);
+    Copy save(CopyDto copy);
 
-    public void deleteById(String id);
+    void deleteById(String id);
 
-    public List<Copy> getCopyByBook(String book);
+    List<Copy> getCopyByBook(String book);
 }
