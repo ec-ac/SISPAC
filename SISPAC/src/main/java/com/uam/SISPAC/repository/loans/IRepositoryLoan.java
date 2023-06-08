@@ -11,8 +11,8 @@ import java.util.List;
 
 @Repository
 public interface IRepositoryLoan extends JpaRepository<Loan, String> {
-    @Query("select e from Loan e where e.systemUser.cif = :user")
-    List<Loan> getLoansByUser(@Param("user") String user);
+    @Query("select e from Loan e where e.systemUser.cif = :cif")
+    List<Loan> getLoansByUser(@Param("cif") String cif);
 
     @Query("select e from Loan e where e.systemUser.names = :names")
     List<Loan> getLoansByNames(@Param("names") String names);
